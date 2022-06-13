@@ -1,28 +1,23 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class J530 {
+
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-
-		// 넉넉하게 배열 선언
-		int[] arr = new int[100];
-
-		int i = -1;// 1
-
-		do {
-			i++;
-
-			arr[i] = sc.nextInt(); // 입력한 숫자를 배열로 받는다.
-			System.out.println(i + "번째 배열=" + arr[i]); // 모르겠으면 써보자
-		} while (arr[i] < 100); // i=i+1; 입력한 숫자 100이전까지 하나씩 증가하면서 돌려준ㄷ
-		System.out.println("\n100이상의 숫자는 계산되지 않습니다.");
-		sc.close();
-
-		int sum = 0;
-		for (int j = 0; j < i; j++) {
-			sum += arr[j];
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = 0; // 지역변수 선언하고 초기화 필요
+		try {
+			String inp = br.readLine();
+			n = Integer.parseInt(inp);
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		System.out.println(sum);
-		System.out.printf("%.1f\n", (double) sum / i);
+		if (n >= 20) {
+			System.out.println("adult");
+		} else {
+			System.out.println((20 - n) + "years later");
+		}
 	}
+
 }
