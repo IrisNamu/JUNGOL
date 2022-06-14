@@ -1,3 +1,6 @@
+package Junol;
+
+//³»°¡ Â§ ÄÚµå
 import java.util.Scanner;
 
 public class Main {
@@ -15,7 +18,7 @@ public class Main {
 		int eng2 = sc.nextInt();
 
 		Who who = new Who(name1, kor1, eng1, name2, kor2, eng2);
-	//	Who who = new Who(sc.next(), sc.nextInt(), sc.nextInt());
+		// Who who = new Who(sc.next(), sc.nextInt(), sc.nextInt());
 
 		sc.close();
 
@@ -26,7 +29,7 @@ public class Main {
 
 }
 
-class Who {
+class Who { 
 	private String name1, name2;
 	private int kor1, kor2;
 	private int eng1, eng2;
@@ -34,6 +37,7 @@ class Who {
 	public String getName1() {
 		return name1;
 	}
+
 
 	public void setName1(String name1) {
 		this.name1 = name1;
@@ -79,7 +83,6 @@ class Who {
 		this.eng2 = eng2;
 	}
 
-	
 	Who(String name1, int kor1, int eng1, String name2, int kor2, int eng2) {
 		this.name1 = name1;
 		this.kor1 = kor1;
@@ -89,5 +92,4 @@ class Who {
 		this.kor2 = kor2;
 		this.eng2 = eng2;
 	}
-
 }
