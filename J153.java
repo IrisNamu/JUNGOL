@@ -1,0 +1,39 @@
+package jungol;
+
+import java.util.Scanner;
+
+public class J153 {
+
+	public static void main(String[] args) {
+		int arr[] = new int[100];
+		int temp = 0;
+
+		Scanner sc = new Scanner(System.in);
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+
+			if (arr[i] == -1) {
+				temp = i - 1; // 인덱스 값 저장하고
+				break; // 빠져나온다.
+
+			}
+		}
+
+		// 입력받은 정수가 3개 미만일 때 출력
+		if (temp - 4 < 0) {
+			for (int j = 0; j <= temp; j++) {
+				System.out.print(arr[j] + " ");
+			}
+
+			// 입력받은 정수가 3개 이상일 때 출력
+			// 마지막에 입력된 위치는 [입력받은 개수-1] 이고 그 앞에 입력받은 것은 [입력받은 개수-2] 이다.
+		} else {
+			for (int j = temp - 2; j <= temp; j++) {
+				System.out.print(arr[j] + " ");
+
+			}
+		}
+		sc.close();
+	}
+}
