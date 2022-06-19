@@ -5,23 +5,21 @@ import java.util.Scanner;
 public class J126 {
 
 	public static void main(String[] args) {
-
 		Scanner sc = new Scanner(System.in);
-
-		do {
-			int num = sc.nextInt();
+		int temp=0;
+		
+		int num=sc.nextInt();
+		while(num<=0) {
+			if(num%2==0) {
+				System.out.println("odd : " +num);
+				System.out.println("even : " +num);
+			}
 			
-
-		} while (num == 0);
-		break;
-		
-		System.out.println("odd : "+ odd);
-		System.out.println("even : "+even);
-		
-	}
-
+			if(num==0)
+				break;
+		}
+				
 		sc.close();
-
 	}
 
 }
