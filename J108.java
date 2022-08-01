@@ -6,6 +6,7 @@ public class J108 {
 		double b = 100.12;
 
 		System.out.printf("%.2f * %d = %.0f", b, a, a * b);
+	
 	}
 
 }
